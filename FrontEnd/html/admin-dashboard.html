@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+ 
+<div class="dashboard-header">
+
+  <div class="header-left">
+    Welcome <span id="adminName">Admin</span>
+  </div>
+
+  <div class="header-center">
+    CHUNAAV
+  </div>
+
+  <div class="header-right">
+    <span class="home-btn" onclick="goHome()">🏠</span>
+  </div>
+
+</div>
+
+<h1 class="dashboard-heading">ADMIN DASHBOARD</h1>
+
+<div class="main-container">
+
+
+  <div class="active-election-box">
+  <h3>Active Election</h3>
+  <div id="activeElectionList"></div>
+  </div>
+
+
+  <div class="cards-container">
+
+    <div class="dashboard-card" data-type="voters">VOTERS</div>
+    <div class="dashboard-card" data-type="add-voter">+ ADD VOTERS</div>
+
+    <div class="dashboard-card" data-type="candidates">CANDIDATES</div>
+    <div class="dashboard-card" data-type="add-candidate">+ ADD CANDIDATE</div>
+
+    <div class="dashboard-card" data-type="elections">ELECTIONS</div>
+    <div class="dashboard-card" data-type="add-election">+ ADD ELECTION</div>
+
+  </div>
+
+  
+  <div id="expandedView" class="expanded-view" style="display:none;">
+
+    <div class="expanded-header">
+      <span class="back-btn" onclick="goBack()">⬅</span>
+      <span id="expandedTitle" class="expanded-title"></span>
+    </div>
+
+    <div id="expandedContent"></div>
+
+  </div>
+
+  
+  <!-- <h2>Add Candidate</h2>
+  <input id="candidate-id" placeholder="Candidate ID" />
+  <input id="candidate-name" placeholder="Candidate Name" />
+  <textarea id="candidate-manifesto" placeholder="Manifesto"></textarea>
+  <button id="addCandidateBtn">Add Candidate</button>
+
+  <h2>Existing Candidates</h2>
+  <ul id="candidateList"></ul>
+
+
+  <h2>Add Voter</h2>
+  <input id="voter-id" placeholder="Voter ID">
+  <input id="voter-name" placeholder="Voter Name">
+  <input id="voter-email" placeholder="Email">
+  <button id="addVoterBtn">Add Voter</button>
+
+  <h2>Existing Voters</h2>
+  <ul id="voterList"></ul>
+
+
+
+  <h2>Create Election</h2>
+
+  <input id="election-id" placeholder="Election ID" />
+  <input id="election-title" placeholder="Election Title" />
+  <label>Start Time</label>
+  <input type="datetime-local" id="startTime">
+
+  <label>End Time</label>
+  <input type="datetime-local" id="endTime">
+
+  <h4>Select Candidates</h4>
+  <div id="candidateCheckboxes"></div>
+
+  <button id="createElectionBtn">Create Election</button>
+
+  <h2>Update Election</h2>
+
+  <div id="updateElectionSection" style="display:none; border:1px solid #ccc; padding:15px; margin-top:20px;">
+
+    <label>Election ID</label><br>
+    <input type="text" id="update-election-id" readonly><br><br>
+
+    <label>Title</label><br>
+    <input type="text" id="update-election-title"><br><br>
+
+    <label>Start Time</label><br>
+    <input type="datetime-local" id="update-startTime"><br><br>
+
+    <label>End Time</label><br>
+    <input type="datetime-local" id="update-endTime"><br><br>
+
+    <label>Candidates</label><br>
+    <div id="updateCandidateCheckboxes"></div>
+
+    <br>
+
+    <button id="updateElectionBtn">Update Election</button>
+
+  </div>
+
+
+
+
+  <h2>All Elections</h2>
+  <ul id="allElectionList"></ul> -->
+
+</div>
+<script src="../js/script.js"></script>
+<script src="../js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="dashboard-header">
+
+  <div class="header-left">
+    Welcome <span id="voterName">Voter</span>
+  </div>
+
+  <div class="header-center">
+    CHUNAAV
+  </div>
+
+  <div class="header-right">
+    <span class="home-btn" onclick="goHome()">🏠</span>
+  </div>
+
+</div>
+
+<h1 class="dashboard-heading">VOTER DASHBOARD</h1>
+
+<div class="main-container">
+
+  <!-- ACTIVE ELECTION -->
+  <div class="active-election-box">
+    <h3>Active Election</h3>
+    <div id="activeElectionVoter"></div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards-container">
+
+    <div class="dashboard-card" data-type="candidates">CANDIDATES</div>
+    <div class="dashboard-card" data-type="past-elections">PAST ELECTIONS</div>
+
+  </div>
+
+  <!-- EXPANDED VIEW -->
+  <div id="expandedView" class="expanded-view" style="display:none;">
+
+    <div class="expanded-header">
+      <span class="back-btn" onclick="goBack()">⬅</span>
+      <span id="expandedTitle" class="expanded-title"></span>
+    </div>
+
+    <div id="expandedContent"></div>
+
+  </div>
+
+</div>
+
+<script src="../js/script.js"></script>
+<script src="../js/voter-dashboard.js"></script>
+
+</body>
+</html>

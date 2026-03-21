@@ -1,0 +1,20 @@
+[
+  {
+    "id": "CAN001",
+    "name": "Candidate 1",
+    "manifesto": "Manifesto 1",
+    "active": true
+  },
+  {
+    "id": "CAN002",
+    "name": "Candidate 2",
+    "manifesto": "Manifesto 2",
+    "active": true
+  },
+  {
+    "id": "CAN003",
+    "name": "Candidate 3",
+    "manifesto": "Manifesto 3",
+    "active": true
+  }
+]

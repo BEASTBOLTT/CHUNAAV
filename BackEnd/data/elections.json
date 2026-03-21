@@ -1,0 +1,64 @@
+[
+  {
+    "id": "ELE1001",
+    "title": "Nayaaaaaa",
+    "candidateIds": [
+      "CAN001",
+      "CAN003"
+    ],
+    "blockchainCandidateIndexes": [],
+    "status": "ENDED",
+    "startTime": "2026-03-14T13:26",
+    "endTime": "2026-03-16T12:26",
+    "votedVoters": []
+  },
+  {
+    "id": "ELE002",
+    "title": "demohhh",
+    "candidateIds": [
+      "CAN002",
+      "CAN003"
+    ],
+    "blockchainCandidateIndexes": [
+      0,
+      1
+    ],
+    "status": "ENDED",
+    "startTime": "2026-03-27T10:31",
+    "endTime": "2026-04-02T08:29",
+    "votedVoters": [
+      "VOT002"
+    ]
+  },
+  {
+    "id": "ELE0007",
+    "title": "aesfhcgzsdgarg",
+    "candidateIds": [
+      "CAN001",
+      "CAN002"
+    ],
+    "blockchainCandidateIndexes": [],
+    "status": "ENDED",
+    "startTime": "2026-03-20T23:00",
+    "endTime": "2026-03-20T23:05",
+    "votedVoters": []
+  },
+  {
+    "id": "ELE009",
+    "title": "frtey",
+    "candidateIds": [
+      "CAN001",
+      "CAN002"
+    ],
+    "blockchainCandidateIndexes": [
+      2,
+      3
+    ],
+    "status": "ENDED",
+    "startTime": "2026-03-21T14:07",
+    "endTime": "2026-03-23T15:12",
+    "votedVoters": [
+      "VOT002"
+    ]
+  }
+]

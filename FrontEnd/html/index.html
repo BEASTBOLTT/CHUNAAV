@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain E-Voting System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="../assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>CHUNAAV</h1>
+        <h2>Blockchain Based E-Voting System</h2>
+        <p>Secure • Transparent • Decentralized</p>
+    </section>
+
+    <!-- Scroll Section -->
+    <section class="roles">
+        <div class="card" onclick="location.href='admin.html'">
+            <h2>Admin Login</h2>
+        </div>
+
+        <div class="card" onclick="location.href='voter.html'">
+            <h2>Voter Login</h2>
+        </div>
+    </section>
+
+    <script>
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const overlay = document.querySelector(".overlay");
+
+        // control intensity (adjust 600 for speed)
+        const opacity = Math.min(scrollY / 600, 0.6);
+
+        overlay.style.background = `rgba(0,0,0,${opacity})`;
+    });
+    </script>
+
+</body>
+</html>
