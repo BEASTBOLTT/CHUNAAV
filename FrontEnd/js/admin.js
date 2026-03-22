@@ -162,28 +162,54 @@ async function loadCandidates() {
   const data = await res.json();
 
   const list = document.getElementById("candidateList");
-  list.innerHTML = "";
+  list.innerHTML = `<div class="card-grid"></div>`;
+
+  const grid = list.querySelector(".card-grid");
 
   data.forEach(c => {
-    const li = document.createElement("li");
-    li.innerHTML = `${c.name} (${c.id}) ${
-      c.active ? `<button onclick="removeCandidate('${c.id}')">Remove</button>` : "(Removed)"
-    }`;
-    list.appendChild(li);
+    grid.innerHTML += `
+      <div class="info-card">
+        <img src="../assets/Candidate&Voter.png" alt="Candidate">
+
+        <p><b>ID:</b> ${c.id}</p>
+        <p><b>Name:</b> ${c.name}</p>
+        <p><b>Manifesto:</b> ${c.manifesto}</p>
+
+        ${
+          c.active
+            ? `<button onclick="removeCandidate('${c.id}')">Remove</button>`
+            : `<p style="color:red;">Removed</p>`
+        }
+      </div>
+    `;
   });
 }
 
-async function loadVoters() {
-  const res = await fetch(`${BACKEND_URL}/admin/voters`);
-  const voters = await res.json();
+async function loadCandidates() {
+  const res = await fetch(`${BACKEND_URL}/admin/candidates`);
+  const data = await res.json();
 
-  const list = document.getElementById("voterList");
-  list.innerHTML = "";
+  const list = document.getElementById("candidateList");
+  list.innerHTML = `<div class="card-grid"></div>`;
 
-  voters.forEach(v => {
-    const li = document.createElement("li");
-    li.textContent = `${v.voterId} - ${v.voterName} (${v.email})`;
-    list.appendChild(li);
+  const grid = list.querySelector(".card-grid");
+
+  data.forEach(c => {
+    grid.innerHTML += `
+      <div class="info-card">
+        <img src="../assets/Candidate&Voter.png" alt="Candidate">
+
+        <p><b>ID:</b> ${c.id}</p>
+        <p><b>Name:</b> ${c.name}</p>
+        <p><b>Manifesto:</b> ${c.manifesto}</p>
+
+        ${
+          c.active
+            ? `<button onclick="removeCandidate('${c.id}')">Remove</button>`
+            : `<p style="color:red;">Removed</p>`
+        }
+      </div>
+    `;
   });
 }
 
