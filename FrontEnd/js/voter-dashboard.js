@@ -215,14 +215,18 @@ async function loadCandidatesForVoter() {
   const data = await res.json();
 
   const container = document.getElementById("candidateList");
-  container.innerHTML = "";
+  container.innerHTML = `<div class="card-grid"></div>`;
+
+  const grid = container.querySelector(".card-grid");
 
   data.filter(c => c.active).forEach(c => {
-    container.innerHTML += `
-      <div style="margin-bottom:15px;">
-        <h3>${c.name}</h3>
-        <p>${c.manifesto}</p>
-        <hr/>
+    grid.innerHTML += `
+      <div class="info-card">
+        <img src="../assets/Candidate&Voter.png" alt="Candidate">
+
+        <p><b>ID:</b> ${c.id}</p>
+        <p><b>Name:</b> ${c.name}</p>
+        <p><b>Manifesto:</b> ${c.manifesto}</p>
       </div>
     `;
   });
