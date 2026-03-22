@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 
-/* Background Video */
+
 .video-container {
     position: fixed;
     top: 0;
@@ -45,6 +45,10 @@ video {
 }
 
 .hero h1 {
+    font-size: 6rem;
+}
+
+.hero h2 {
     font-size: 3rem;
 }
 
