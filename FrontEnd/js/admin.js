@@ -363,10 +363,11 @@ async function loadUpdateCandidateCheckboxes(selectedIds) {
 
     box.innerHTML += `
       <label>
-        <input type="checkbox" value="${c.id}" ${checked}>
-        ${c.name}
-      </label><br>
+       <input type="checkbox" value="${c.id}">
+       ${c.name}
+      </label>
     `;
+
   });
 }
 
@@ -466,10 +467,12 @@ function loadExpandedContent(type) {
     case "add-voter":
       title.textContent = "ADD VOTERS";
       container.innerHTML = `
-        <input id="voter-id" placeholder="Voter ID">
-        <input id="voter-name" placeholder="Voter Name">
-        <input id="voter-email" placeholder="Email">
-        <button onclick="addVoter()">Add Voter</button>
+          <div class="form-container">
+          <input id="voter-id" placeholder="Voter ID">
+          <input id="voter-name" placeholder="Voter Name">
+          <input id="voter-email" placeholder="Email">
+          <button onclick="addVoter()">Add Voter</button>
+          </div>
       `;
       break;
 
@@ -482,10 +485,12 @@ function loadExpandedContent(type) {
     case "add-candidate":
       title.textContent = "ADD CANDIDATES";
       container.innerHTML = `
-        <input id="candidate-id" placeholder="Candidate ID" />
-        <input id="candidate-name" placeholder="Candidate Name" />
-        <textarea id="candidate-manifesto" placeholder="Manifesto"></textarea>
-        <button onclick="addCandidate()">Add Candidate</button>
+          <div class="form-container">
+          <input id="candidate-id" placeholder="Candidate ID" />
+          <input id="candidate-name" placeholder="Candidate Name" />
+          <textarea id="candidate-manifesto" placeholder="Manifesto"></textarea>
+          <button onclick="addCandidate()">Add Candidate</button>
+          </div>
       `;
       break;
 
