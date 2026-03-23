@@ -185,29 +185,23 @@ async function loadCandidates() {
   });
 }
 
-async function loadCandidates() {
-  const res = await fetch(`${BACKEND_URL}/admin/candidates`);
-  const data = await res.json();
+async function loadVoters() {
+  const res = await fetch(`${BACKEND_URL}/admin/voters`);
+  const voters = await res.json();
 
-  const list = document.getElementById("candidateList");
+  const list = document.getElementById("voterList");
   list.innerHTML = `<div class="card-grid"></div>`;
 
   const grid = list.querySelector(".card-grid");
 
-  data.forEach(c => {
+  voters.forEach(v => {
     grid.innerHTML += `
       <div class="info-card">
-        <img src="../assets/Candidate&Voter.png" alt="Candidate">
+        <img src="../assets/Candidate&Voter.png" alt="Voter">
 
-        <p><b>ID:</b> ${c.id}</p>
-        <p><b>Name:</b> ${c.name}</p>
-        <p><b>Manifesto:</b> ${c.manifesto}</p>
-
-        ${
-          c.active
-            ? `<button onclick="removeCandidate('${c.id}')">Remove</button>`
-            : `<p style="color:red;">Removed</p>`
-        }
+        <p><b>ID:</b> ${v.voterId}</p>
+        <p><b>Name:</b> ${v.voterName}</p>
+        <p><b>Email:</b> ${v.email}</p>
       </div>
     `;
   });
