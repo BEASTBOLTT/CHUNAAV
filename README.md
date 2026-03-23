@@ -123,10 +123,6 @@ npx hardhat run scripts/deploy.js --network localhost
 Create a `.env` file inside `BackEnd/`:
 
 ```
-PORT=5000
-
-ADMIN_EMAIL=admin@demo.com
-ADMIN_PASSWORD=admin123
 
 EMAIL=your_email@gmail.com
 EMAIL_PASS=your_app_password
@@ -165,14 +161,6 @@ node server.js
 
 ---
 
-## 🧪 Demo Credentials
-
-```
-Email: admin@demo.com
-Password: admin123
-```
-
----
 
 ## 🔄 Future Improvements
 
