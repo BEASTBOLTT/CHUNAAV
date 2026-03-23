@@ -172,4 +172,57 @@ width: 100%;
     font-size: 14px;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers horizontally */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+.form-container input,
+.form-container textarea {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+.form-container textarea {
+    height: 80px;
+    resize: none;
+}
+
+
+.form-container button {
+    width: 200px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    transform: scale(1.05);
+}
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+}
 
