@@ -40,7 +40,7 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(20, 17, 131);
     text-align: center;
 }
 
@@ -50,6 +50,7 @@ video {
 
 .hero h2 {
     font-size: 3rem;
+    width: 3000px;
 }
 
 .hero p {
@@ -64,14 +65,14 @@ video {
     justify-content: center;
     align-items: center;
     gap: 40px;
-
+    color: white;
     background: transparent; 
 }
 
 .card {
     width: 250px;
     height: 150px;
-    background: white;
+    background:rgb(20, 17, 131);
     border-radius: 10px;
     display: flex;
     justify-content: center;
