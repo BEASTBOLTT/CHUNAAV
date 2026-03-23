@@ -355,7 +355,6 @@ window.editElection = async function (electionId) {
 };
 
 async function loadUpdateCandidateCheckboxes(selectedIds) {
-}
 
   const res = await fetch(`${BACKEND_URL}/admin/candidates`);
   const candidates = await res.json();
@@ -372,11 +371,11 @@ async function loadUpdateCandidateCheckboxes(selectedIds) {
       <label>
        <input type="checkbox" value="${c.id}">
        ${c.name}
-  </label>
-`;
+      </label>
+    `;
 
   });
-
+}
 
 async function updateElection() {
 
