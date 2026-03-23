@@ -503,19 +503,21 @@ function loadExpandedContent(type) {
     case "add-election":
       title.textContent = "CREATE ELECTIONS";
       container.innerHTML = `
-        <input id="election-id" placeholder="Election ID" />
-        <input id="election-title" placeholder="Election Title" />
+        <div class="form-container">
+          <input id="election-id" placeholder="Election ID" />
+          <input id="election-title" placeholder="Election Title" />
 
-        <label>Start Time</label>
-        <input type="datetime-local" id="startTime">
+          <label>Start Time</label>
+          <input type="datetime-local" id="startTime">
 
-        <label>End Time</label>
-        <input type="datetime-local" id="endTime">
+          <label>End Time</label>
+          <input type="datetime-local" id="endTime">
 
-        <h4>Select Candidates</h4>
-        <div id="candidateCheckboxes"></div>
+          <h4>Select Candidates</h4>
+          <div id="candidateCheckboxes" class="checkbox-group"></div>
 
-        <button onclick="createElection()">Create Election</button>
+          <button onclick="createElection()">Create Election</button>
+        </div>
       `;
 
       loadCandidateCheckboxes();
