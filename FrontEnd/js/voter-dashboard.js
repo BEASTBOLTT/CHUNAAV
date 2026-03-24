@@ -117,14 +117,12 @@ async function castVote(candidateId) {
   }
 }
 async function loadPastElections() {
-  const res = await fetch(`${BACKEND_URL}/voter/elections`);
+  const res = await fetch(${BACKEND_URL}/voter/elections);
   const elections = await res.json();
 
   const pastList = document.getElementById("past-elections");
 
-  if (!pastList) return; // safety
-
-  pastList.innerHTML = `<div class="card-grid"></div>`;
+  pastList.innerHTML = <div class="card-grid"></div>;
   const grid = pastList.querySelector(".card-grid");
 
   elections
