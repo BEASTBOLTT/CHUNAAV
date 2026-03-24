@@ -121,17 +121,30 @@ async function loadPastElections() {
   const elections = await res.json();
 
   const pastList = document.getElementById("past-elections");
-  pastList.innerHTML = "";
+
+  if (!pastList) return; // safety
+
+  pastList.innerHTML = `<div class="card-grid"></div>`;
+  const grid = pastList.querySelector(".card-grid");
 
   elections
     .filter(e => e.status === "ENDED")
     .forEach(e => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <strong>${e.title}</strong> (${e.id})
-        <button onclick="viewResult('${e.id}')">View Result</button>
+      grid.innerHTML += `
+        <div class="info-card">
+
+          <p><b>${e.id}</b></p>
+
+          <p style="font-weight:bold; font-size:16px;">
+            ${e.title}
+          </p>
+
+          <button onclick="viewResult('${e.id}')">
+            View Result
+          </button>
+
+        </div>
       `;
-      pastList.appendChild(li);
     });
 }
 
