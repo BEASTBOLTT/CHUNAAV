@@ -226,3 +226,24 @@ width: 100%;
     border-radius: 6px;
 }
 
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-actions button {
+    padding: 6px 10px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-actions button:hover {
+    transform: scale(1.05);
+}
+
