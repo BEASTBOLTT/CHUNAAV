@@ -226,7 +226,7 @@ async function loadElections() {
   const active = document.getElementById("activeElectionList");
   const all = document.getElementById("allElectionList");
 
-  if (!active && !all) return; // safety
+  if (!active && !all) return; //return statement
 
   active && (active.innerHTML = "");
   all && (all.innerHTML = "");
