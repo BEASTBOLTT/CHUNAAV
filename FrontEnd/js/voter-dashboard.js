@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   loadVoterName(); 
   loadActiveElection();    
@@ -117,32 +118,21 @@ async function castVote(candidateId) {
   }
 }
 async function loadPastElections() {
-  const res = await fetch(${BACKEND_URL}/voter/elections);
+  const res = await fetch(`${BACKEND_URL}/voter/elections`);
   const elections = await res.json();
 
   const pastList = document.getElementById("past-elections");
-
-  pastList.innerHTML = <div class="card-grid"></div>;
-  const grid = pastList.querySelector(".card-grid");
+  pastList.innerHTML = "";
 
   elections
     .filter(e => e.status === "ENDED")
     .forEach(e => {
-      grid.innerHTML += `
-        <div class="info-card">
-
-          <p><b>${e.id}</b></p>
-
-          <p style="font-weight:bold; font-size:16px;">
-            ${e.title}
-          </p>
-
-          <button onclick="viewResult('${e.id}')">
-            View Result
-          </button>
-
-        </div>
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <strong>${e.title}</strong> (${e.id})
+        <button onclick="viewResult('${e.id}')">View Result</button>
       `;
+      pastList.appendChild(li);
     });
 }
 

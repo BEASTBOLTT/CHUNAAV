@@ -220,68 +220,50 @@ async function loadCandidateCheckboxes() {
 }
 
 async function loadElections() {
-  const res = await fetch(${BACKEND_URL}/admin/elections);
+  const res = await fetch(`${BACKEND_URL}/admin/elections`);
   const elections = await res.json();
 
   const active = document.getElementById("activeElectionList");
   const all = document.getElementById("allElectionList");
 
-  if (!active && !all) return;
+  if (!active && !all) return; // safety
 
-  if (active) active.innerHTML = <div class="card-grid"></div>;
-  if (all) all.innerHTML = <div class="card-grid"></div>;
-
-  const activeGrid = active?.querySelector(".card-grid");
-  const allGrid = all?.querySelector(".card-grid");
+  active && (active.innerHTML = "");
+  all && (all.innerHTML = "");
 
   let hasActive = false;
 
   elections.forEach(e => {
 
-    const card = `
-      <div class="info-card">
+    const html = `
+      <div>
+        <b>${e.id}</b> - ${e.title} [${e.status}]<br>
+        Start: ${e.startTime ? new Date(e.startTime).toLocaleString() : "Not Scheduled"}<br>
+        End: ${e.endTime ? new Date(e.endTime).toLocaleString() : "Not Scheduled"}<br>
 
-        <p><b>${e.id}</b></p>
-
-        <p style="font-weight:bold; font-size:16px;">
-          ${e.title}
-        </p>
-
-        <p><b>Status:</b> ${e.status}</p>
-        <p><b>Start:</b> ${e.startTime ? new Date(e.startTime).toLocaleString() : "Not Set"}</p>
-        <p><b>End:</b> ${e.endTime ? new Date(e.endTime).toLocaleString() : "Not Set"}</p>
-
-        <div class="card-actions">
-          ${
-            e.status === "CREATED"
-              ? <button onclick="requestStartElection('${e.id}')">Start</button>
-              : ""
-          }
-
-          ${
-            e.status === "ACTIVE"
-              ? <button onclick="requestEndElection('${e.id}')">End</button>
-              : ""
-          }
-
-          ${
-            e.status === "CREATED"
-              ? <button onclick="editElection('${e.id}')">Edit</button>
-              : ""
-          }
-        </div>
-
+        ${e.status === "CREATED" ? `<button onclick="requestStartElection('${e.id}')">Start Early</button>` : ""}
+        ${e.status === "ACTIVE" ? `<button onclick="requestEndElection('${e.id}')">End Early</button>` : ""}
+        ${e.status === "CREATED" ? `<button onclick="editElection('${e.id}')">Edit</button>` : ""}
       </div>
+      <hr>
     `;
 
+    // ACTIVE SECTION
     if (e.status === "ACTIVE") {
       hasActive = true;
-      activeGrid && (activeGrid.innerHTML += card);
+
+      const div = document.createElement("div");
+      div.innerHTML = html;
+      if (active) active.appendChild(div);
     }
 
-    allGrid && (allGrid.innerHTML += card);
+    // ALL SECTION
+    const divAll = document.createElement("div");
+    divAll.innerHTML = html;
+    if (all) all.appendChild(divAll);
   });
 
+ 
   if (active && !hasActive) {
     active.innerHTML = "<p><b>No Active Elections</b></p>";
   }
@@ -542,3 +524,5 @@ function loadExpandedContent(type) {
       break;
   }
 }
+
+
