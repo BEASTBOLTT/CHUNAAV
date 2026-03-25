@@ -1,17 +1,32 @@
 [
   {
     "voterId": "VOT001",
-    "voterName": "Arnav",
+    "voterName": "Arnav Bhushan",
     "email": "bhushanrajput5280@gmail.com"
   },
   {
     "voterId": "VOT002",
-    "voterName": "Devam",
+    "voterName": "Devam Pandey",
     "email": "devam.finance.dp27@gmail.com"
   },
   {
     "voterId": "VOT003",
-    "voterName": "Priyanshu",
+    "voterName": "Priyanshu Choubey",
     "email": "priyanshuchoubey91@gmail.com"
+  },
+  {
+    "voterId": "VOT004",
+    "voterName": "Arnav Gulkari",
+    "email": "arnovgulkari@gmail.com"
+  },
+  {
+    "voterId": "VOT005",
+    "voterName": "Manasvi Maheshwari",
+    "email": "manasvimaheshwari30@gmail.com"
+  },
+  {
+    "voterId": "VOT006",
+    "voterName": "Urmi Barman",
+    "email": "urmibarman272@gmail.com"
   }
 ]

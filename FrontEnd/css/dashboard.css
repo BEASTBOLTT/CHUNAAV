@@ -3,19 +3,23 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+
 html,body{
 height: 100%;
 width: 100%;
+background-color: #000000;
+color: #c6c2c2; /* default text */
+font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 .dashboard-header {
     position: relative;
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 2px solid #000;
+    border-bottom: 1px solid #1DAD52;
 }
-
 
 .header-center {
     position: absolute;
@@ -24,41 +28,46 @@ width: 100%;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: #FFFFFF;
 }
 
 .header-left {
     font-size: 16px;
+    color: #c6c2c2;
 }
 
 .header-right {
     margin-left: auto;
     font-size: 20px;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 .home-btn:hover {
     opacity: 0.7;
 }
 
+/* MAIN HEADING */
 .dashboard-heading {
     text-align: center;
-    font-size: 85px;
+    font-size: 70px;
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 60px;
     letter-spacing: 2px;
+    color: #FFFFFF;
 }
 
-
+/* CONTAINER */
 .main-container {
-    margin: 80px;
+    margin: 60px;
     padding: 30px;
-    border: 2px solid #000;
+    border: 1px solid #1DAD52;
     border-radius: 15px;
 }
 
-
+/* ACTIVE ELECTION BOX */
 .active-election-box {
-    border: 2px solid #000;
+    border: 1px solid #1DAD52;
     border-radius: 12px;
     padding: 15px;
     margin: 30px;
@@ -67,47 +76,48 @@ width: 100%;
 
 .active-election-box h3 {
     margin-bottom: 10px;
+    color: #FFFFFF;
 }
 
-
+/* DASHBOARD CARDS */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: 30px;
-    
 }
 
-
 .dashboard-card {
-    margin: 30px;
-    border: 2px solid #000;
+    margin: 20px;
+    border: 1px solid #1DAD52;
     border-radius: 12px;
     padding: 40px;
     display: flex;
     align-items: center; 
     justify-content: center;
-    font-size: 50px;
+    font-size: 40px;
     cursor: pointer;
     transition: 0.3s;
-    height: 250px;
+    height: 220px;
+    color: #FFFFFF;
 }
 
 .dashboard-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 12px #1DAD52;
 }
 
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .cards-container {
         grid-template-columns: 1fr;
     }
 }
 
-
+/* EXPANDED VIEW */
 .expanded-view {
     margin: 30px;
-    border: 2px solid #000;
+    border: 1px solid #1DAD52;
     border-radius: 15px;
     padding: 20px;
 }
@@ -125,18 +135,21 @@ width: 100%;
     left: 0;
     cursor: pointer;
     font-size: 18px;
+    color: #FFFFFF;
 }
 
 .expanded-title {
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #FFFFFF;
 }
 
 .hide {
     display: none;
 }
 
+/* GRID */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -144,76 +157,84 @@ width: 100%;
     margin-top: 20px;
 }
 
-
+/* INFO CARDS */
 .info-card {
-    border: 2px solid #000;
+    border: 1px solid #1DAD52;
     border-radius: 12px;
     padding: 15px;
-    background: #fff;
+    background-color: #000000;
     text-align: center;
     transition: 0.3s;
 }
 
 .info-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px #1DAD52;
 }
 
-
 .info-card img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     margin-bottom: 10px;
 }
 
-
+/* TEXT COLORS */
 .info-card p {
     margin: 5px 0;
     font-size: 14px;
+    color: #c6c2c2;
 }
 
+.info-card b {
+    color: #FFFFFF;
+}
+
+/* FORM */
 .form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* centers horizontally */
-    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 30px;
 }
 
-
+/* INPUTS */
 .form-container input,
 .form-container textarea {
     width: 300px;
     padding: 10px;
-    border: 2px solid #000;
+    background-color: #000000;
+    border: 1px solid #1DAD52;
     border-radius: 6px;
     font-size: 14px;
+    color: #FFFFFF;
 }
 
-
-.form-container textarea {
-    height: 80px;
-    resize: none;
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #c6c2c2;
 }
 
-
+/* BUTTONS */
 .form-container button {
     width: 200px;
     padding: 10px;
-    background: black;
-    color: white;
+    background: #1DAD52;
+    color: #000000;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .form-container button:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 12px #1DAD52;
 }
 
-
+/* CHECKBOX GROUP */
 .checkbox-group {
     display: flex;
     flex-direction: column;
@@ -221,11 +242,13 @@ width: 100%;
     width: 300px;
     max-height: 150px;
     overflow-y: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #1DAD52;
     padding: 10px;
     border-radius: 6px;
+    color: #FFFFFF;
 }
 
+/* CARD ACTION BUTTONS */
 .card-actions {
     display: flex;
     justify-content: center;
@@ -235,15 +258,86 @@ width: 100%;
 
 .card-actions button {
     padding: 6px 10px;
-    border: none;
-    background: black;
-    color: white;
+    border: 1px solid #1DAD52;
+    background: transparent;
+    color: #FFFFFF;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .card-actions button:hover {
-    transform: scale(1.05);
+    background: #1DAD52;
+    color: #000000;
 }
 
+.info-card .card-title {
+    color: #FFFFFF !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-card .card-id {
+    color: #c6c2c2;
+    font-size: 14px;
+}
+
+.info-card button {
+    padding: 8px 12px;
+    border: 1px solid #1DAD52;
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.info-card button:hover {
+    background: #1DAD52;
+    color: #000000;
+}
+
+.card-btn {
+    padding: 8px 12px;
+    border: 1px solid #1DAD52;
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.card-btn:hover {
+    background: #1DAD52;
+    color: #000000;
+}
+
+input, textarea {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #1DAD52 !important;
+}
+
+
+input:focus, textarea:focus {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #1DAD52 !important;
+    outline: none;
+    box-shadow: 0 0 5px #1DAD52;
+}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #6E6E6E;
+}

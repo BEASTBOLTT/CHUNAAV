@@ -241,9 +241,9 @@ async function loadElections() {
     const card = `
       <div class="info-card">
 
-        <p><b>${e.id}</b></p>
+        <p class="card-id">${e.id}</p>
 
-        <p style="font-weight:bold; font-size:16px;">
+        <p class="card-title">
           ${e.title}
         </p>
 

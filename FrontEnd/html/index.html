@@ -11,7 +11,7 @@
     <!-- Background Video -->
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="../assets/download.mp4" type="video/mp4">
+            <source src="../assets/background.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
     </div>
@@ -34,17 +34,7 @@
         </div>
     </section>
 
-    <script>
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        const overlay = document.querySelector(".overlay");
-
-        // control intensity (adjust 600 for speed)
-        const opacity = Math.min(scrollY / 600, 0.6);
-
-        overlay.style.background = `rgba(0,0,0,${opacity})`;
-    });
-    </script>
+    
 
 </body>
 </html>

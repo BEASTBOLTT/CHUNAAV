@@ -1,5 +1,11 @@
 [
   {
+    "id": "NOTA",
+    "name": "None Of The Above",
+    "manifesto": "No one is suitable to rule",
+    "active": true
+  },
+  {
     "id": "CAN001",
     "name": "Candidate 1",
     "manifesto": "Manifesto 1",
