@@ -80,5 +80,26 @@
     "votedVoters": [
       "VOT002"
     ]
+  },
+  {
+    "id": "ELE111",
+    "title": "NEW DEMO ELECTION",
+    "candidateIds": [
+      "NOTA",
+      "CAN002",
+      "CAN003"
+    ],
+    "blockchainCandidateIndexes": [
+      0,
+      1,
+      2
+    ],
+    "status": "ENDED",
+    "startTime": "2026-04-11T05:52",
+    "endTime": "2026-04-18T17:52",
+    "votedVoters": [
+      "VOT001",
+      "VOT006"
+    ]
   }
 ]
